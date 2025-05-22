@@ -1,6 +1,7 @@
 VENV=.venv
 
 setup:
+
 	uv venv $(VENV)
 	uv pip install -r requirements.txt --python $(VENV)/bin/python
 
@@ -9,5 +10,6 @@ run:
 
 test:
 	$(VENV)/bin/uv -m pytest -v
+
 
 .PHONY: setup run test
